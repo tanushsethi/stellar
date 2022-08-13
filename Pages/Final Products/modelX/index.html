@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model X</title>
+    <link rel="icon" href="../../../logoS.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+
+    <!-------------------------------------- Loading Screen ------------------------------------->
+
+    <div class="loader-container">
+        <div class="loader-inner-container">
+            <div class="loader-outer"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <div>
+        <nav id="nav-bar">
+
+            <!-- Logo -->
+            <img src="../../../logo.png" alt="logo" class="logo"  onclick="window.location.href = '../../../index.html'">
+
+            <!-- Phone Navigation bar/Main menu -->
+            <section class="ham-menu">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </section>
+
+            <!-- Navigation bar/Main menu -->
+            <ul class="nav-list">
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../index.html">Shop</a></li>
+                <li><a href="../../about/about.html">About</a></li>
+                <li><a href="../../Contact Us/contact.html">Contact</a></li>
+                <li id="loginA"><a href="../../Sign Up/signup.html">Login</a></li>
+            </ul>
+
+            <!-- Login -->
+            <button type="button" class="login-button">Login</button>
+
+        </nav>
+        <div>
+            <div id='main2'>
+                <div>
+                    <div id='mainCarousel'>
+                        <div class="carousel"
+                            data-flickity='{ "fade": true, "imagesLoaded": true ,"wrapAround":true,"pageDots": false,"autoPlay": true,"prevNextButtons": true}'>
+                            <div class="carousel-cell">
+                                <img class='img1' class="carousel-cell-image" src="img/white/one.jpg" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img class='img2' class="carousel-cell-image" src="img/white/two.jpg" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img class='img3' class="carousel-cell-image" src="img/white/three.jpg" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img class='img4' class="carousel-cell-image" src="img/white/four.jpg" />
+                            </div>
+                            <div class="carousel-cell">
+                                <img class='img5' class="carousel-cell-image" src="img/white/five.jpg" />
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="carousel-cell video-wrap">
+                                    <video height="100%" width="100%" src="../videos/one.mp4" muted autoplay
+                                        loop></video>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="carousel-cell video-wrap">
+                                    <video height="100%" width="100%" src="../videos/two.mp4" muted autoplay
+                                        loop></video>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="carousel-cell video-wrap">
+                                    <video height="100%" width="100%" src="../videos/three.mp4" muted autoplay
+                                        loop></video>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="carousel-cell video-wrap">
+                                    <video height="100%" width="100%" src="../videos/four.mp4" muted autoplay
+                                        loop></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><i class="fas fa-info-circle" style='color:#416ce1;font-size: 1.7rem;'></i></div>
+                        <div>$1,500 Clean Fuel Reward is now<br> available for California residents.</div>
+                    </div>
+                    <div class='rightM'>
+                        <div>
+                            <span class='model-name'>Model X</span>
+                            <p>Est. Delivery: August-September</p>
+                            <div class="container">
+                                <div class="tabs">
+                                    <input type="radio" id="radio-1" name="tabs" checked />
+                                    <label class="tab" for="radio-1">Purchase Price</label>
+                                    <input type="radio" id="radio-2" name="tabs" />
+                                    <label class="tab" for="radio-2">Rental Charges*</label>
+                                    <span class="glider"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table>
+                                <tr class='r1'>
+                                    <td>
+                                        <span class='counterIt' data-count="360">0</span><span>mi</span>
+                                    </td>
+                                    <td>
+                                        <span class='counterIt' data-count="155">0</span><span>mph</span>
+                                    </td>
+                                    <td>
+                                        <span class='counterIt' data-count="3.8">0</span><span>sec</span>
+                                    </td>
+                                </tr>
+                                <tr class='r2'>
+                                    <td>Range(Est.)</td>
+                                    <td>Top Speed</td>
+                                    <td>0-60mph</td>
+                                </tr>
+                            </table>
+                            <br><br>
+                        </div>
+                        <div class='selector'>
+                            <p>&nbsp&nbsp&nbsp&nbspDual Motor All-Wheel Drive</p><br>
+                            <label>
+                                <input class='i1' type="radio" name="select" value="" checked>
+                                <div>
+                                    <span>Long Range</span><span class='toChange1'>$89,990</span>
+                                </div>
+                            </label>
+                            <br>
+                            <p>&nbsp&nbsp&nbsp&nbspTri Motor All-Wheel Drive</p><br>
+                            <label>
+                                <input class='i2' type="radio" name="select" value="">
+                                <div>
+                                    <span>Plaid</span><span class='toChange2'>$119,990</span>
+                                </div>
+                            </label><br>
+                        </div>
+                        <div class='dropHere'>
+                            <ul class="menu cf">
+                                <li>
+                                    <a>Select Time Period</a>
+                                    <ul class="submenu">
+                                        <li><a>6 Months</a></li>
+                                        <li><a>1 Year</a></li>
+                                        <li><a>2 Years</a></li>
+                                        <li><a>3 Years</a></li>
+                                        <li><a>5 Year</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class='toChange'>Prices shown without the $1,500 California Clean Fuel Reward and potential
+                            incentives
+                            and gas savings of $5,300. Customize your potential savings and incentives.
+                        </p>
+                        <div class='plaidUpgrades'>
+                            <p>Plaid Upgrades</p>
+                            <p>Included</p>
+                            <ul>
+                                <li>Quickest accelerating SUV in production today</li>
+                                <li>0-60 mph: 2.5s</li>
+                                <li>1/4 mile: 9.9s</li>
+                                <li>1,020 horsepower</li>
+                                <li>Three high performance motors with carbon-sleeved rotors</li>
+                                <li>Torque vectoring</li>
+                            </ul>
+                        </div>
+
+                        <div class='paints'>
+                            <p>Paint</p>
+                            <div>
+                                <div>
+                                    <label>
+                                        <input class='p1' type="radio" name="select" value="" checked>
+                                        <img src="paint/white.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input class='p2' type="radio" name="select" value="">
+                                        <img src="paint/black.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input class='p3' type="radio" name="select" value="">
+                                        <img src="paint/silver.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input class='p4' type="radio" name="select" value="">
+                                        <img src="paint/blue.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input class='p5' type="radio" name="select" value="">
+                                        <img src="paint/red.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='paintPrice'>
+                            <span>Pearl White Multi-Coat</span>
+                            <span>Included</span>
+                        </div>
+
+                        <div class='wheels'>
+                            <p>Wheels</p>
+                            <div>
+                                <div>
+                                    <label>
+                                        <input class='w1' type="radio" name="select" value="" checked>
+                                        <img src="img/w1.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input class='w2' type="radio" name="select" value="">
+                                        <img src="img/w2.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='wheelsPrice'>
+                            <span>20'' Cyberstream Wheels</span>
+                            <span>Included</span>
+                            <span>Est. Range 360mi</span>
+                        </div>
+
+                        <div class='interior'>
+                            <p>Interior</p>
+                            <div>
+                                <div class='interior1'>
+                                    <label>
+                                        <input class='int1' type="radio" name="select" value="" checked>
+                                        <img src="interior/black.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div id='interior2'>
+                                    <label>
+                                        <input class='int2' type="radio" name="select" value="">
+                                        <img src="interior/white.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                                <div id='interior3'>
+                                    <label>
+                                        <input class='int3' type="radio" name="select" value="">
+                                        <img src="interior/cream.jpg" height="45" width="45">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='interiorPrice'>
+                            <span>Included</span>
+                            <span>All Black</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <span>Ebony Décor</span>
+                        </div>
+                        <div class='automate'>
+                            <p class='stylish'>Full Self-Driving<br>Capability</p>
+                            <p class='text-center'>$10,000</p>
+                            <ul>
+                                <li>Navigate on Autopilot</li>
+                                <li>Auto Lane Change</li>
+                                <li>Autopark</li>
+                                <li>Summon</li>
+                                <li>Full Self-Driving Computer</li>
+                                <li>Traffic Light and Stop Sign Control</li>
+                                <p>Coming later this year</p>
+                                <li>Autosteer on city streets</li>
+                            </ul>
+                            <p>The currently enabled features require active driver supervision and do not make the
+                                vehicle
+                                autonomous. The activation and use of these features are dependent on achieving
+                                reliability
+                                far
+                                in excess of human drivers as demonstrated by billions of miles of experience, as well
+                                as
+                                regulatory approval, which may take longer in some jurisdictions. As these self-driving
+                                features
+                                evolve, your car will be continuously upgraded through over-the-air software updates.
+                            </p>
+                            <br>
+                            <button>ADD</button>
+                        </div>
+                        <div class='order'>
+                            <p class='stylish'>Order Your Model X</p>
+                            <p class='text-center'>Est. Delivery: July-August</p>
+                            <button>CONTINUE TO PAYMENT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id='main1'>
+                    <div>
+                        <i class="fas fa-info-circle" style='color:#416ce1;font-size: 1.7rem;line-height: 19px;'></i>
+                        &nbsp;&nbsp;
+                        $1,500 Clean Fuel Reward is now available for California residents.
+                    </div>
+                    <img class='img1' class="carousel-cell-image" src="img/white/one.jpg" />
+                    <div>
+                        <div class='rightM'>
+                            <div>
+                                <span class='model-name'>Model X</span>
+                                <p>Est. Delivery: August-September</p>
+                                <div class="container">
+                                    <div class="tabs">
+                                        <input type="radio" id="main1-radio-1" name="tabs" checked />
+                                        <label class="tab" for="main1-radio-1">Purchase Price</label>
+                                        <input type="radio" id="main1-radio-2" name="tabs" />
+                                        <label class="tab" for="main1-radio-2">Rental Charges*</label>
+                                        <span class="glider"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr class='r1'>
+                                        <td>
+                                            <span class='main1-counterIt' data-count="360">0</span><span>mi</span>
+                                        </td>
+                                        <td>
+                                            <span class='main1-counterIt' data-count="155">0</span><span>mph</span>
+                                        </td>
+                                        <td>
+                                            <span class='main1-counterIt' data-count="3.8">0</span><span>sec</span>
+                                        </td>
+                                    </tr>
+                                    <tr class='r2'>
+                                        <td>Range(Est.)</td>
+                                        <td>Top Speed</td>
+                                        <td>0-60mph</td>
+                                    </tr>
+                                </table>
+                                <br><br>
+                            </div>
+                            <div class='selector'>
+                                <p>&nbsp&nbsp&nbsp&nbspDual Motor All-Wheel Drive</p><br>
+                                <label>
+                                    <input class='main1-i1' type="radio" name="select" value="" checked>
+                                    <div>
+                                        <span>Long Range</span><span class='toChange1'>$89,990</span>
+                                    </div>
+                                </label>
+                                <br>
+                                <p>&nbsp&nbsp&nbsp&nbspTri Motor All-Wheel Drive</p><br>
+                                <label>
+                                    <input class='main1-i2' type="radio" name="select" value="">
+                                    <div>
+                                        <span>Plaid</span><span class='toChange2'>$119,990</span>
+                                    </div>
+                                </label><br>
+                            </div>
+                            <div class='dropHere'>
+                                <ul class="menu cf">
+                                    <li>
+                                        <a>Select Time Period</a>
+                                        <ul class="submenu">
+                                            <li><a>6 Months</a></li>
+                                            <li><a>1 Year</a></li>
+                                            <li><a>2 Years</a></li>
+                                            <li><a>3 Years</a></li>
+                                            <li><a>5 Year</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class='toChange'>Prices shown without the $1,500 California Clean Fuel Reward and
+                                potential
+                                incentives
+                                and gas savings of $5,300. Customize your potential savings and incentives.
+                            </p>
+                            <img class='img2' class="carousel-cell-image" src="img/white/two.jpg" />
+                            <div class='plaidUpgrades'>
+                                <p>Plaid Upgrades</p>
+                                <p>Included</p>
+                                <ul>
+                                    <li>Quickest accelerating SUV in production today</li>
+                                    <li>0-60 mph: 2.5s</li>
+                                    <li>1/4 mile: 9.9s</li>
+                                    <li>1,020 horsepower</li>
+                                    <li>Three high performance motors with carbon-sleeved rotors</li>
+                                    <li>Torque vectoring</li>
+                                </ul>
+                            </div>
+
+                            <div class='paints paintsMain'>
+                                <p>Paint</p>
+                                <div>
+                                    <div>
+                                        <label>
+                                            <input class='p1' type="radio" name="select" value="" checked>
+                                            <img src="paint/white.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input class='p2' type="radio" name="select" value="">
+                                            <img src="paint/black.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input class='p3' type="radio" name="select" value="">
+                                            <img src="paint/silver.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input class='p4' type="radio" name="select" value="">
+                                            <img src="paint/blue.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input class='p5' type="radio" name="select" value="">
+                                            <img src="paint/red.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='paintPrice paintPriceMain'>
+                                <span>Pearl White Multi-Coat</span>
+                                <span>Included</span>
+                            </div>
+                            <br><br><br>
+                            <img class='img4' class="carousel-cell-image" src="img/white/four.jpg" />
+                            <div class='wheels wheelsMain'>
+                                <p>Wheels</p>
+                                <div>
+                                    <div>
+                                        <label>
+                                            <input class='w1' type="radio" name="select" value="" checked>
+                                            <img src="img/w1.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input class='w2' type="radio" name="select" value="">
+                                            <img src="img/w2.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='wheelsPrice wheelsPriceMain'>
+                                <span>20'' Cyberstream Wheels</span>
+                                <span>Included</span>
+                                <span>Est. Range 360mi</span>
+                            </div>
+                            <br><br>
+                            <img class='img5' class="carousel-cell-image" src="img/white/five.jpg" />
+                            <div class='interior interiorMain'>
+                                <p>Interior</p>
+                                <div>
+                                    <div class='interior1'>
+                                        <label>
+                                            <input class='int1' type="radio" name="select" value="" checked>
+                                            <img src="interior/black.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div class='interior2'>
+                                        <label>
+                                            <input class='int2' type="radio" name="select" value="">
+                                            <img src="interior/white.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                    <div class='interior3'>
+                                        <label>
+                                            <input class='int3' type="radio" name="select" value="">
+                                            <img src="interior/cream.jpg" height="45" width="45">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='interiorPrice interiorPriceMain'>
+                                <span>Included</span>
+                                <span>All Black</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <span>Ebony Décor</span>
+                            </div>
+                            <div class='automate'>
+                                <p class='stylish'>Full Self-Driving<br>Capability</p>
+                                <p class='text-center'>$10,000</p>
+                                <img class='img3' class="carousel-cell-image" src="img/white/three.jpg" />
+                                <ul>
+                                    <li>Navigate on Autopilot</li>
+                                    <video height="100%" width="100%" src="../videos/one.mp4" muted autoplay
+                                        loop></video>
+                                    <li>Auto Lane Change</li>
+                                    <li>Autopark</li>
+                                    <video height="100%" width="100%" src="../videos/three.mp4" muted autoplay
+                                        loop></video>
+                                    <li>Summon</li>
+                                    <li>Full Self-Driving Computer</li>
+                                    <video height="100%" width="100%" src="../videos/four.mp4" muted autoplay
+                                        loop></video>
+                                    <li>Traffic Light and Stop Sign Control</li>
+                                    <p>Coming later this year</p>
+                                    <li>Autosteer on city streets</li>
+                                </ul>
+                                <p>The currently enabled features require active driver supervision and do not make the
+                                    vehicle
+                                    autonomous. The activation and use of these features are dependent on achieving
+                                    reliability
+                                    far
+                                    in excess of human drivers as demonstrated by billions of miles of experience, as
+                                    well
+                                    as
+                                    regulatory approval, which may take longer in some jurisdictions. As these
+                                    self-driving
+                                    features
+                                    evolve, your car will be continuously upgraded through over-the-air software
+                                    updates.
+                                </p>
+                                <br>
+                                <button>ADD</button>
+                            </div>
+                            <div class='order'>
+                                <p class='stylish'>Order Your Model X</p>
+                                <p class='text-center'>Est. Delivery: July-August</p>
+                                <button>CONTINUE TO PAYMENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(".menu").click((e) => {
+            e.preventDefault();
+        });
+
+        // Loading Screen 
+
+        $(window).on("load", function () {
+            $(".loader-container").delay(1000).fadeOut();
+        });
+
+        // Changing Logo on Resize
+
+        if ($(window).width() <= 600) {
+            $(".logo").attr("src", "../../../logoS.png");
+            $(".logo").css({
+                "height": "60px",
+                "width": "76px"
+            });
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        }
+
+        $(window).resize(() => {
+            if ($(window).width() <= 600) {
+                $(".logo").attr("src", "../../../logoS.png");
+                $(".logo").css({
+                    "height": "60px",
+                    "width": "76px"
+                });
+            }
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        });
+
+        const ham = document.querySelector('.ham-menu');
+        const navlist = document.querySelector('.nav-list');
+
+        $(".login-button").click(() => {
+            window.location.href = "../../Sign Up/signup.html";
+        });
+
+        $(".nav-list").click(() => {
+            navlist.classList.toggle('open');
+            ham.classList.toggle('animateLine');
+        });
+
+        ham.addEventListener('click', () => {
+            navlist.classList.toggle('open');
+            ham.classList.toggle('animateLine');
+        });
+
+        $(".i1").prop("checked", true);
+        $(".main-i1").prop("checked", true);
+        var imagesModelS = {
+            "white": ["img/white/one.jpg", "img/white/two.jpg", "img/white/three.jpg", "img/white/four.jpg", "img/white/five.jpg", "Pearl White Multi-Coat", "Included"],
+            "black": ["img/black/one.jpg", "img/black/two.jpg", "img/black/three.jpg", "img/black/four.jpg", "img/black/five.jpg", "Solid Black", "$1,500"],
+            "silver": ["img/silver/one.jpg", "img/silver/two.jpg", "img/silver/three.jpg", "img/silver/four.jpg", "img/silver/five.jpg", "Midnight Silver Metallic", "$1,500"],
+            "blue": ["img/blue/one.jpg", "img/blue/two.jpg", "img/blue/three.jpg", "img/blue/four.jpg", "img/blue/five.jpg", "Deep Blue Metallic", "$1,500"],
+            "red": ["img/red/one.jpg", "img/red/two.jpg", "img/red/three.jpg", "img/red/four.jpg", "img/red/five.jpg", "Red Multi-Coat", "$1,500"],
+            "wheels1": ["img/white/one.jpg", "img/white/two.jpg", "img/white/three.jpg", "img/white/four.jpg", "img/white/five.jpg", "19'' Tempest Wheels", "Included", "Est. Range 412mi"],
+            "wheels2": ["img/wheels2/one.jpg", "img/wheels2/two.jpg", "img/wheels2/three.jpg", "img/wheels2/four.jpg", "img/wheels2/five.jpg", "21'' Arachnid Wheels", "$4,500", "Est. Range 375mi"],
+            "blackInt": ["img/white/one.jpg", "img/white/two.jpg", "img/white/three.jpg", "img/white/four.jpg", "img/white/five.jpg", "All Black", "Included", "Ebony Décor"],
+            "whiteInt": ["img/whiteInt/one.jpg", "img/whiteInt/two.jpg", "img/whiteInt/three.jpg", "img/whiteInt/four.jpg", "img/whiteInt/five.jpg", "Black and White", "$2,000", "Walnut Décor"],
+            "creamInt": ["img/creamInt/one.jpg", "img/creamInt/two.jpg", "img/creamInt/three.jpg", "img/creamInt/four.jpg", "img/creamInt/five.jpg", "Cream", "$2,000", "Walnut Décor"]
+        }
+
+        var counts = document.getElementsByClassName("counterIt");
+        var countsMain1 = document.getElementsByClassName("main1-counterIt");
+        function count() {
+            $('.counterIt').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+                    {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+
+                    });
+            });
+        };
+        count();
+        $(".plaidUpgrades").css("display", "none");
+        $('.selector input').change(() => {
+            if ($(".i1").is(':checked')) {
+                counts[0].innerHTML = 0;
+                counts[1].innerHTML = 0;
+                counts[2].innerHTML = 0;
+                counts[0].setAttribute("data-count", "360");
+                counts[1].setAttribute("data-count", "155");
+                counts[2].setAttribute("data-count", "3.8");
+                count();
+                $(".plaidUpgrades").css("display", "none");
+            }
+            if ($(".i2").is(':checked')) {
+                counts[0].innerHTML = 0;
+                counts[1].innerHTML = 0;
+                counts[2].innerHTML = 0;
+                counts[0].setAttribute("data-count", "340");
+                counts[1].setAttribute("data-count", "163");
+                counts[2].setAttribute("data-count", "2.5");
+                count();
+                $(".plaidUpgrades").css("display", "block");
+            }
+        });
+        function countM1() {
+            $('.main1-counterIt').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+                    {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+
+                    });
+            });
+        };
+        countM1();
+        $('.selector input').change(() => {
+            if ($(".main1-i1").is(':checked')) {
+                countsMain1[0].innerHTML = 0;
+                countsMain1[0].setAttribute("data-count", "360");
+                countsMain1[1].innerHTML = 0;
+                countsMain1[1].setAttribute("data-count", "155");
+                countsMain1[2].innerHTML = 0;
+                countsMain1[2].setAttribute("data-count", "3.8");
+                countM1();
+                $(".plaidUpgrades").css("display", "none");
+            }
+            if ($(".main1-i2").is(':checked')) {
+                countsMain1[0].innerHTML = 0;
+                countsMain1[0].setAttribute("data-count", "340");
+                countsMain1[1].innerHTML = 0;
+                countsMain1[1].setAttribute("data-count", "163");
+                countsMain1[2].innerHTML = 0;
+                countsMain1[2].setAttribute("data-count", "2.5");
+                countM1();
+                $(".plaidUpgrades").css("display", "block");
+            }
+        });
+        function setImg(x) {
+            $(".img1").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][0]);
+                $(this).fadeIn('fast');
+            });
+            $(".img2").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][1]);
+                $(this).fadeIn('fast');
+            });
+            $(".img3").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][2]);
+                $(this).fadeIn('fast');
+            });
+            $(".img4").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][3]);
+                $(this).fadeIn('fast');
+            });
+            $(".img5").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][4]);
+                $(this).fadeIn('fast');
+            });
+            $(".paintPrice>span:nth-child(1)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][5]);
+                $(this).fadeIn('fast');
+            });
+            $(".paintPrice>span:nth-child(2)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][6]);
+                $(this).fadeIn('fast');
+            });
+        }
+
+        $('.paints input').change(() => {
+            if ($(".p1").is(':checked')) {
+                setImg("white");
+            }
+            if ($(".p2").is(':checked')) {
+                setImg("black");
+            }
+            if ($(".p3").is(':checked')) {
+                setImg("silver");
+            }
+            if ($(".p4").is(':checked')) {
+                setImg("blue");
+            }
+            if ($(".p5").is(':checked')) {
+                setImg("red");
+            }
+        });
+
+        function setImg2(x) {
+            $(".img1").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][0]);
+                $(this).fadeIn('fast');
+            });
+            $(".img2").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][1]);
+                $(this).fadeIn('fast');
+            });
+            $(".img3").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][2]);
+                $(this).fadeIn('fast');
+            });
+            $(".img4").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][3]);
+                $(this).fadeIn('fast');
+            });
+            $(".img5").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][4]);
+                $(this).fadeIn('fast');
+            });
+            $(".wheelsPrice>span:nth-child(1)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][5]);
+                $(this).fadeIn('fast');
+            });
+            $(".wheelsPrice>span:nth-child(2)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][6]);
+                $(this).fadeIn('fast');
+            });
+            $(".wheelsPrice>span:nth-child(3)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][7]);
+                $(this).fadeIn('fast');
+            });
+        }
+
+        $('.wheels input').change(() => {
+            if ($(".w1").is(':checked')) {
+                setImg2("wheels1");
+            }
+            if ($(".w2").is(':checked')) {
+                setImg2("wheels2");
+            }
+        });
+
+        $(".dropHere").css("display","none");
+
+        $('.tabs input').change(() => {
+            if ($("#radio-1").is(':checked')) {
+                $(".toChange1").text("$89,990");
+                $(".toChange2").text("$119,990");
+                $(".dropHere").css("display","none");
+                $(".toChange").text("Prices shown without the $1,500 California Clean Fuel Reward and potential incentives and gas savings of $5,300. Customize your potential savings and incentives.");
+            }
+            if ($("#radio-2").is(':checked')) {
+                $(".toChange1").text("$83,190*");
+                $(".toChange2").text("$113,190*");
+                $(".dropHere").css("display","block");
+                $(".toChange").text("* Prices shown without the $1,500 California Clean Fuel Reward and potential incentives and gas savings of $5,300. Customize your potential savings and incentives.");
+            }
+            if ($("#main1-radio-1").is(':checked')) {
+                $(".toChange1").text("$89,990");
+                $(".toChange2").text("$119,990");
+                $(".dropHere").css("display","none");
+                $(".toChange").text("Prices shown without the $1,500 California Clean Fuel Reward and potential incentives and gas savings of $5,300. Customize your potential savings and incentives.");
+            }
+            if ($("#main1-radio-2").is(':checked')) {
+                $(".toChange1").text("$83,190*");
+                $(".toChange2").text("$113,190*");
+                $(".dropHere").css("display","block");
+                $(".toChange").text("* Prices shown without the $1,500 California Clean Fuel Reward and potential incentives and gas savings of $5,300. Customize your potential savings and incentives.");
+            }
+        });
+
+        function setImg3(x) {
+            $(".img1").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][0]);
+                $(this).fadeIn('fast');
+            });
+            $(".img2").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][1]);
+                $(this).fadeIn('fast');
+            });
+            $(".img3").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][2]);
+                $(this).fadeIn('fast');
+            });
+            $(".img4").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][3]);
+                $(this).fadeIn('fast');
+            });
+            $(".img5").fadeOut('fast', function () {
+                $(this).attr('src', imagesModelS[x][4]);
+                $(this).fadeIn('fast');
+            });
+            $(".interiorPrice>span:nth-child(1)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][6]);
+                $(this).fadeIn('fast');
+            });
+            $(".interiorPrice>span:nth-child(2)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][5]);
+                $(this).fadeIn('fast');
+            });
+            $(".interiorPrice>span:nth-child(3)").fadeOut('fast', function () {
+                $(this).text(imagesModelS[x][7]);
+                $(this).fadeIn('fast');
+            });
+        }
+
+        $('.interior input').change(() => {
+            if ($(".int1").is(':checked')) {
+                setImg3("blackInt");
+            }
+            if ($(".int2").is(':checked')) {
+                setImg3("whiteInt");
+            }
+            if ($(".int3").is(':checked')) {
+                setImg3("creamInt");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

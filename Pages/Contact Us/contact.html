@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-------------------------------------- Loading Screen ------------------------------------->
+
+    <div class="loader-container">
+        <div class="loader-inner-container">
+            <div class="loader-outer"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Navbar Container-->
+    <nav id="nav-bar">
+
+        <!-- Logo -->
+        <img width="130px" height="105px" src="../../logo.png" alt="logo" class="logo"  onclick="window.location.href = '../../index.html'">
+
+        <!-- Phone Navigation bar/Main menu -->
+        <section class="ham-menu">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </section>
+
+        <!-- Navigation bar/Main menu -->
+        <ul class="nav-list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../Pages/Final Products/index.html">Shop</a></li>
+            <li><a href="../about/about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li id="goToLogin"><a href="../../Pages/Sign Up/signup.html">Login</a></li>
+        </ul>
+
+        <!-- Login -->
+        <button type="button" class="login-button">Login</button>
+
+    </nav>
+
+    <div id='particles-js'></div>
+
+    <section class='container-outer'>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="../../Media/Icons/location.png"></span>
+                            <span>2876 Madrew Road<br>
+                                Los Angeles CA<br>
+                                90017
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="../../Media/Icons/mail-512.png"></span>
+                            <span>lorem@ipsum.com</span>
+                        </li>
+                        <li>
+                            <span><img src="../../Media/Icons/phone.png"></span>
+                            <span>310-286-4106</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://www.instagram.com"><img src="../../Media/Icons/instagram.png"
+                                class='icons'></a></li>
+                    <li><a href="https://www.linkedin.com/"><img src="../../Media/Icons/linkedin.png" class='icons'></a>
+                    </li>
+                    <li><a href="https://www.twitter.com"><img src="../../Media/Icons/twitter.png" class='icons'></a>
+                    </li>
+                    <li><a href="https://www.pinterest.com"><img src="../../Media/Icons/pinterest.png"
+                                class='icons'></a></li>
+                    <li><a href="https://www.youtube.com"><img src="../../Media/Icons/youtube.png" class='icons'></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        // Loading Screen
+
+        $("#MainSection").css("display", "none");
+
+        $(window).on("load", function () {
+            $(".loader-container").delay(1000).fadeOut();
+            $("#MainSection").delay(1000).fadeIn();
+        });
+
+        // Load Login Window
+
+        $(".login-button").click(() => {
+            window.location.href = "../../Pages/Sign Up/signup.html";
+        });
+
+        // Changing Logo Image on resize
+
+        if ($(window).width() <= 600) {
+            $(".logo").attr("src", "../../logoS.png");
+            $(".logo").css({
+                "height": "60px",
+                "width": "76px"
+            });
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        }
+
+        $(window).resize(() => {
+            if ($(window).width() <= 600) {
+                $(".logo").attr("src", "../../logoS.png");
+                $(".logo").css({
+                    "height": "60px",
+                    "width": "76px"
+                });
+            }
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        });
+
+        // Small Navbar Styling on Scroll
+
+        $(window).scroll(function () {
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() > 145) {
+                $("#nav-bar").css({
+                    "background-color": "black",
+                    "z-index": 99
+                });
+            }
+            if ($(window).scrollTop() < 145) {
+                $("#nav-bar").css("background-color", "transparent");
+            }
+        });
+
+
+        // Phone Menu
+        const ham = document.querySelector('.ham-menu');
+        const navlist = document.querySelector('.nav-list');
+        // const links = document.querySelectorAll('.nav-list li');
+
+        ham.addEventListener('click', () => {
+            navlist.classList.toggle('open');
+            ham.classList.toggle('animateLine');
+        });
+    </script>
+    <script src='particles.js'></script>
+    <script src='app.js'></script>
+
+</body>
+
+</html>

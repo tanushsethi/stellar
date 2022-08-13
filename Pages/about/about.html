@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-------------------------------------- Loading Screen ------------------------------------->
+
+    <div class="loader-container">
+        <div class="loader-inner-container">
+            <div class="loader-outer"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <div id='MainSection'>
+        <div id='particles-js'></div>
+        <!-- Navbar Container-->
+        <nav id="nav-bar">
+
+            <!-- Logo -->
+            <img width="130px" height="105px" src="../../logo.png" alt="logo" class="logo"  onclick="window.location.href = '../../index.html'">
+
+            <!-- Phone Navigation bar/Main menu -->
+            <section class="ham-menu">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </section>
+
+            <!-- Navigation bar/Main menu -->
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../Final Products/index.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="../Contact Us/contact.html">Contact</a></li>
+                <li id="goToLogin"><a href="../Sign Up/signup.html">Login</a></li>
+            </ul>
+
+            <!-- Login -->
+            <button type="button" class="login-button">Login</button>
+
+        </nav>
+
+
+
+        <header>
+            <div class="about-container">
+
+                <div class="image-cont">
+                    <img src="../../logo.png" id="about-logo">
+                </div>
+
+                <h1>About Us</h1>
+
+                <p>
+                    Stellar is India's first and only self-drive car rental service provider. Our fleet consists of more
+                    than 350+ self-drive cars across India and an established network extending across 50+ rental
+                    stations in 20 cities in the country.<br><br>We are your one stop shop for complete autocare for
+                    every
+                    make and model of vehicle. We believe that car hire is about the journey itself.<br><br>Stellar has
+                    put
+                    its customers at the heart of everything we do. We go the extra mile, offering ultimate flexibility
+                    and convenience, to meet the high expectations of sophisticated car enthusiasts.<br><br>At stellar,
+                    we
+                    are immensely proud of the fleet of cars we have built up over the years. So, if you need a compact
+                    car for a city break, a car for the whole family, or anything in-between, we have the right set of
+                    wheels for you.<br><br>Whether you are looking for a standard economy or compact car rental or
+                    something
+                    a little bigger like an SUV, we have plenty of options to choose from. We also have convertible,
+                    luxury and premium options if you want a more upscale rental. You can easily compare prices for each
+                    car class using our matrix layout on desktop, for mobile be sure to use our filters in the list view
+                    in order to pull the best results for your individual needs.<br><br>Because of this you are able to
+                    find
+                    and compare all affordable auto rental prices available, helping you save time and find the cheapest
+                    car rental for your business or leisure trip. In order to find great car rental deals when booking
+                    make sure you search multiple times as prices tend to change. Also be sure to check individual
+                    company terms and conditions when renting. When considering the total cost of your rental be sure to
+                    keep in mind the expense of applicable taxes, fees, refueling, late drop-off, drivers under 25,
+                    additional driver or one-way charges.<br><br>If you have questions and need to contact our team,
+                    please
+                    send us an email on our blog, or click on the contact us page under the menu in the right hand
+                    corner of the home page.<br><br>You can be sure that the car you reserved will be the car you drive
+                    at
+                    the price you were quoted.<br><br>------------<br><br>The Complete Clean Pledge<br><br>Stellar never
+                    stops
+                    looking for ways to enhance cleanliness and safety. We pledge to go above and beyond our already
+                    rigorous cleaning protocols, including strict sanitizing procedures to protect the health and safety
+                    of all.<br><br>Wether you are travelling with friends or family or need any easy solution for
+                    business
+                    appointments, renting a car will save your time,money and allows a flexibility you cant find
+                    elsewhere.
+                </p>
+            </div>
+        </header>
+    </div>
+    <script>
+
+
+        // Phone Menu
+        const ham = document.querySelector('.ham-menu');
+        const navlist = document.querySelector('.nav-list');
+        // const links = document.querySelectorAll('.nav-list li');
+
+        ham.addEventListener('click', () => {
+            navlist.classList.toggle('open');
+            ham.classList.toggle('animateLine');
+        });
+
+
+        // Loading Screen 
+
+        $(window).on("load", function () {
+            $(".loader-container").delay(1000).fadeOut();
+        });
+
+        // Load Login Window
+
+        $(".login-button").click(() => {
+            window.location.href = "../Sign Up/signup.html";
+        });
+
+        // Small Navbar Styling on Scroll
+
+        $(window).scroll(function () {
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() > 145) {
+                $("#nav-bar").css({
+                    "background-color": "black",
+                    "z-index": 99
+                });
+            }
+            if ($(window).scrollTop() < 145) {
+                $("#nav-bar").css("background-color", "transparent");
+            }
+        });
+
+        // Changing Logo Image on resize
+
+        if ($(window).width() <= 600) {
+            $(".logo").attr("src", "../../logoS.png");
+            $(".logo").css({
+                "height": "60px",
+                "width": "76px"
+            });
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        }
+
+        $(window).resize(() => {
+            if ($(window).width() <= 600) {
+                $(".logo").attr("src", "../../logoS.png");
+                $(".logo").css({
+                    "height": "60px",
+                    "width": "76px"
+                });
+            }
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        });
+    </script>
+    <script src='particles.js'></script>
+    <script src='app.js'></script>
+
+</body>
+
+</html>

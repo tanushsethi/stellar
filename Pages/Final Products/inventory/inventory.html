@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory</title>
+  <link rel="icon" href="../../../logoS.png" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-------------------------------------- Loading Screen ------------------------------------->
+
+  <div class="loader-container">
+    <div class="loader-inner-container">
+      <div class="loader-outer"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-inner"></div>
+    </div>
+  </div>
+
+  <div id='particles-js'></div>
+
+
+  <!-- Navbar Container-->
+  <nav id="nav-bar">
+
+    <!-- Logo -->
+    <img src="../../../logo.png" alt="logo" class="logo"  onclick="window.location.href = '../../../index.html'">
+
+    <!-- Phone Navigation bar/Main menu -->
+    <section class="ham-menu">
+      <div class="line" id="line1"></div>
+      <div class="line" id="line2"></div>
+      <div class="line" id="line3"></div>
+    </section>
+
+    <!-- Navigation bar/Main menu -->
+    <ul class="nav-list">
+      <li><a href="../../../index.html">Home</a></li>
+      <li><a href="../../Final Products/index.html">Shop</a></li>
+      <li><a href="../../about/about.html">About</a></li>
+      <li><a href="../../Contact Us/contact.html">Contact</a></li>
+      <li id="goToLogin"><a href="../../Sign Up/signup.html">Login</a></li>
+    </ul>
+
+    <!-- Login -->
+    <button type="button" class="login-button">Login</button>
+
+  </nav>
+  <div class="container">
+    <div class="modal">
+      <p>Your inventory is Empty</p>
+    </div>
+  </div>
+  <script>
+
+    // Loading Screen
+
+    $("body").css("overflow", "hidden");
+
+    $(window).on("load", function () {
+      $(".loader-container").delay(1000).fadeOut();
+      $('body')
+        .delay(1100)
+        .queue(function (next) {
+          $(this).css('overflow-y', 'scroll');
+          next();
+        });
+    });
+
+    $(".login-button").click(() => {
+      window.location.href = "../../Sign Up/signup.html";
+    });
+
+    // Phone Menu
+    const ham = document.querySelector('.ham-menu');
+    const navlist = document.querySelector('.nav-list');
+
+    $(".nav-list").click(() => {
+      navlist.classList.toggle('open');
+      ham.classList.toggle('animateLine');
+    });
+
+    ham.addEventListener('click', () => {
+      navlist.classList.toggle('open');
+      ham.classList.toggle('animateLine');
+    });
+
+    // Changing Logo on Resize
+
+    if ($(window).width() <= 600) {
+      $(".logo").attr("src", "../../../logoS.png");
+      $(".logo").css({
+        "height": "60px",
+        "width": "76px"
+      });
+      if ($(window).width() > 600) {
+        $(".logo").attr("src", "../../../logo.png");
+        $(".logo").css({
+          "height": "170%",
+          "width": "120px"
+        });
+      }
+    }
+
+    $(window).resize(() => {
+      if ($(window).width() <= 600) {
+        $(".logo").attr("src", "../../../logoS.png");
+        $(".logo").css({
+          "height": "60px",
+          "width": "76px"
+        });
+      }
+      if ($(window).width() > 600) {
+        $(".logo").attr("src", "../../../logo.png");
+        $(".logo").css({
+          "height": "170%",
+          "width": "120px"
+        });
+      }
+    });
+  </script>
+  <script src='particles.js'></script>
+  <script src='app.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+
+#particles-js {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    top: 0%;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+button, i, a {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button, i, a {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    border: none;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('Roboto-Regular.ttf');
+}
+
+/* General */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: roboto;
+    scroll-behavior: smooth;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>  Loading Screen <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* Animation For Inner Divs */
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Container */
+
+.loader-container {
+    background: #333;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 100;
+    top: 0%;
+}
+
+/* Inner Container/Flex */
+
+.loader-inner-container {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* setting position absolute to all inner divs */
+
+.loader-circle, .loader-outer, .loader-inner {
+    position: absolute;
+}
+
+/* Inner Circle */
+
+.loader-circle {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    border: 3px solid whitesmoke;
+}
+
+/* Outer Arc */
+
+.loader-outer {
+    height: 94%;
+    width: 98%;
+    border-radius: 50%;
+    border-left: 3px solid cyan;
+    -webkit-animation: spin 0.3s ease-in-out infinite;
+    animation: spin 0.3s ease-in-out infinite;
+}
+
+/* Inner Arc */
+
+.loader-inner {
+    height: 60%;
+    width: 63%;
+    border-radius: 50%;
+    border-right: 3px solid cyan;
+    animation: spin 0.3s ease-in-out infinite reverse;
+}
+
+/* -------------------- Nav-bar -------------------- */
+
+/* Nav-bar Container */
+
+#nav-bar {
+    z-index: 10;
+    height: 10vh;
+    width: 100vw;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    background-color: transparent;
+}
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    left: 3%;
+    cursor: pointer;
+    height: 170%;
+    width: 120px;
+}
+
+/* Nav-bar List */
+
+.nav-list>li {
+    position: relative;
+    margin: 2vh;
+    list-style: none;
+    display: inline-block;
+}
+
+/* Nav-bar List > inner anchor tags */
+
+.nav-list>li a {
+    color: #fff;
+    display: inline-block;
+    height: 20px;
+    padding: 0px 8px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/* Highlighting Current Page in navbar*/
+
+.nav-list li a:active {
+    font-weight: 600;
+}
+
+/* On Hover spacing: Nav-bar List */
+
+.nav-list li a:hover {
+    margin: 0px 30px;
+}
+
+/* On hover lines Animation */
+
+/* Creating Lines using after and befoe*/
+
+.nav-list li a::before, .nav-list li a::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Adjusting Bottom Line */
+
+.nav-list li a::before {
+    margin-top: 30px;
+    bottom: -30%;
+    right: -20%;
+}
+
+/* Adjusting Upper Line */
+
+.nav-list li a::after {
+    left: -20%;
+    top: -20%;
+}
+
+/* Increasing Line width on hover */
+
+.nav-list li a:hover::before, .nav-list li a:hover::after {
+    width: 140%;
+}
+
+/* Login button */
+
+.login-button {
+    position: absolute;
+    display: block;
+    right: 3%;
+    border: 2px solid #f9f9ff;
+    background-color: transparent;
+    color: #f9f9f9;
+    height: 35px;
+    width: 110px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.login-button:hover {
+    background-color: #f9f9f9;
+    color: #000;
+    -webkit-box-shadow: 0 0 10px #333232;
+    box-shadow: 0 0 10px #333232;
+}
+
+#goToLogin {
+    display: none;
+}
+
+.line {
+    transition: all 0.5s ease-in-out;
+}
+
+.modal p {
+    color: white;
+}
+
+a {
+    color: #bf0222;
+}
+
+.warning {
+    display: none;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal {
+    background: linear-gradient(to left, rgba(0, 225, 255, 0.644), rgba(9, 160, 230, 0.603));
+    border-radius: 5px;
+    color: black;
+    font-family: sans-serif;
+    line-height: 1.5;
+    max-width: 50%;
+    height: 300px;
+    width: 500px;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+@media only screen and (max-width: 600px) {
+    /* ---------- Navbar ---------- */
+    #goToLogin {
+        display: inline-block;
+    }
+    .login-button {
+        display: none;
+    }
+    #nav-bar {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse !important;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start !important;
+        padding-right: 20px !important;
+    }
+    .line {
+        height: 4px !important;
+        width: 35px !important;
+        background-color: #fff;
+        margin: 6px !important;
+        border-radius: 5px !important;
+    }
+    .ham-menu {
+        cursor: pointer;
+        z-index: 50;
+    }
+    .nav-list {
+        font-size: large;
+        opacity: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        height: 100vh !important;
+        width: 100vw !important;
+        background-color: #292929;
+        opacity: 0.9;
+        clip-path: circle(0px at 88% 5%);
+        -webkit-clip-path: circle(0px at 88% 5%);
+        -webkit-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        z-index: 45;
+    }
+    .nav-list.open {
+        clip-path: circle(1000px at 88% 5%) !important;
+        -webkit-clip-path: circle(1000px at 88% 5%) !important;
+    }
+    .ham-menu.animateLine #line1 {
+        position: relative !important;
+        -webkit-transform: rotate(45deg) translateY(14px) !important;
+        -ms-transform: rotate(45deg) translateY(14px) !important;
+        transform: rotate(45deg) translateY(14px) !important;
+    }
+    .ham-menu.animateLine #line2 {
+        -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        transform: translateX(-20px);
+        background: transparent !important;
+    }
+    .ham-menu.animateLine #line3 {
+        position: relative !important;
+        -webkit-transform: rotate(-45deg) translateY(-15px);
+        -ms-transform: rotate(-45deg) translateY(-15px);
+        transform: rotate(-45deg) translateY(-15px);
+    }
+    .modal {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+#particles-js {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    top: 0%;
+}

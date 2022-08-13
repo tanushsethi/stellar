@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&diplay=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#particles-js {
+    position: absolute;
+    height: 85vh;
+    width: 100%;
+    z-index: 0;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: roboto;
+    src: url('../../Fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: amorisa;
+    src: url('../../Fonts/Amorisa Free.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-ExtraBold;
+    src: url('../../Fonts/Montserrat-ExtraBold.ttf');
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>  Loading Screen <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* Animation For Inner Divs */
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Container */
+
+.loader-container {
+    background: #333;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Inner Container/Flex */
+
+.loader-inner-container {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* setting position absolute to all inner divs */
+
+.loader-circle, .loader-outer, .loader-inner {
+    position: absolute;
+}
+
+/* Inner Circle */
+
+.loader-circle {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    border: 3px solid whitesmoke;
+}
+
+/* Outer Arc */
+
+.loader-outer {
+    height: 94%;
+    width: 98%;
+    border-radius: 50%;
+    border-left: 3px solid cyan;
+    -webkit-animation: spin 0.3s ease-in-out infinite;
+    animation: spin 0.3s ease-in-out infinite;
+}
+
+/* Inner Arc */
+
+.loader-inner {
+    height: 60%;
+    width: 63%;
+    border-radius: 50%;
+    border-right: 3px solid cyan;
+    animation: spin 0.3s ease-in-out infinite reverse;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>  Header <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../../Media/Images/home-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#nav-bar {
+    transition: all 0.3s linear;
+}
+
+/* -------------------- Nav-bar -------------------- */
+
+/* General */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: roboto;
+    scroll-behavior: smooth;
+}
+
+/* -------------------- Nav-bar -------------------- */
+
+/* Nav-bar containerP */
+
+#nav-bar {
+    z-index: 10;
+    height: 75px;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+}
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    left: 3%;
+    cursor: pointer;
+    height: 170%;
+    width: 120px;
+}
+
+/* Nav-bar List */
+
+.nav-list li {
+    position: relative;
+    margin: 2vh;
+    list-style: none;
+    display: inline-block;
+}
+
+/* Nav-bar List > inner anchor tags */
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    display: inline-block;
+    height: 20px;
+    padding: 0px 8px;
+    transition: all 0.2s;
+}
+
+/* Highlighting Current Page in navbar*/
+
+.nav-list li a:active {
+    font-weight: 600;
+}
+
+/* On Hover spacing: Nav-bar List */
+
+.nav-list li a:hover {
+    margin: 0px 30px;
+}
+
+/* On hover lines Animation */
+
+/* Creating Lines using after and befoe*/
+
+.nav-list li a::before, .nav-list li a::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Adjusting Bottom Line */
+
+.nav-list li a::before {
+    margin-top: 30px;
+    bottom: -30%;
+    right: -20%;
+}
+
+/* Adjusting Upper Line */
+
+.nav-list li a::after {
+    left: -20%;
+    top: -20%;
+}
+
+/* Increasing Line width on hover */
+
+.nav-list li a:hover::before, .nav-list li a:hover::after {
+    width: 140%;
+}
+
+
+/* Login button */
+
+.login-button {
+    position: absolute;
+    display: block;
+    right: 3%;
+    border: 2px solid #f9f9ff;
+    background-color: transparent;
+    color: #f9f9f9;
+    height: 35px;
+    width: 110px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.login-button:hover {
+    background-color: #f9f9f9;
+    color: #000;
+    -webkit-box-shadow: 0 0 10px #333232;
+    box-shadow: 0 0 10px #333232;
+    cursor: pointer;
+}
+
+#goToLogin {
+    display: none;
+}
+
+
+.container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh; 
+}
+
+.container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 500px;
+    display: flex;
+    z-index: 20;
+}
+
+.container .contactInfo {
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: linear-gradient(to left, rgba(0, 225, 255, 0.89), rgba(9, 160, 230, 0.842));
+    background-position: center;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.container .contactInfo h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .contactInfo ul.info {
+    position: relative;
+    margin: 20px 0;
+}
+
+.container .contactInfo ul.info li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+.container .contactInfo ul.info li span:nth-child(1) {
+    width: 20px;
+    min-width: 20px;
+}
+
+.container .contactInfo ul.info li span:nth-child(1) img {
+    max-width: 100%;
+}
+
+.container .contactInfo ul.info li span:nth-child(2) {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.container .contactInfo ul.sci {
+    position: relative;
+    display: flex;
+}
+
+.container .contactInfo ul.sci li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.container .contactInfo ul.sci li a {
+    text-decoration: none;
+}
+
+.icons {
+    margin: 7px;
+    height: 25px;
+    width: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icons:hover {
+    transform: scale(1.4);
+}
+
+.container .contactForm {
+    position: absolute;
+    padding: 40px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: rgba(192, 193, 236, 0.212);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+
+.container .contactForm h2 {
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contactForm input, .contactForm textarea {
+    background-color: transparent;
+    color: whitesmoke !important;
+}
+
+.container .contactForm .formBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.container .contactForm .formBox .inputBox {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.container .contactForm .formBox .inputBox.w50 {
+    width: 47%;
+}
+
+.container .contactForm .formBox .inputBox.w100 {
+    width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input, .container .contactForm .formBox .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    resize: none;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.container .contactForm .formBox .inputBox textarea {
+    height: 120px;
+}
+
+.container .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+    color: whitesmoke;
+}
+
+.container .contactForm .formBox .inputBox input:focus~span, .container .contactForm .formBox .inputBox input:valid~span, .container .contactForm .formBox .inputBox textarea:focus~span, .container .contactForm .formBox .inputBox textarea:valid~span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: cyan;
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(to left, rgba(0, 225, 255, 0.89), rgba(9, 160, 230, 0.842));
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"]:hover {
+    background: #0d948b;
+} 
+
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+    .container .contactInfo {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+    }
+    .container .contactForm {
+        position: relative;
+        width: calc(100%-350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 991px) {
+    section::before {
+        display: none;
+    }
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container .contactForm {
+        width: 100%;
+        height: auto;
+    }
+    .container .contactInfo {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+    }
+    .container .contactInfo ul.sci {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    /* ---------- Navbar ---------- */
+    #goToLogin {
+        display: inline-block;
+    }
+    .login-button {
+        display: none;
+    }
+    #nav-bar { 
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding-right: 20px;
+        z-index: 999;
+    }
+    .line {
+        height: 4px;
+        width: 35px;
+        background-color: #fff;
+        margin: 6px;
+        border-radius: 5px;
+        transition: 0.4s all ease-in-out;
+    }
+    .ham-menu {
+        cursor: pointer;
+        z-index: 50;
+    }
+    .nav-list {
+        font-size: large;
+        opacity: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        height: 100vh;
+        width: 100vw;
+        background-color: #292929;
+        opacity: 0.9;
+        clip-path: circle(0px at 88% 5%);
+        -webkit-clip-path: circle(0px at 88% 5%);
+        -webkit-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        z-index: 45;
+    }
+    .nav-list.open {
+        clip-path: circle(1000px at 88% 5%);
+        -webkit-clip-path: circle(1000px at 88% 5%);
+    }
+    .ham-menu.animateLine #line1 {
+        position: relative;
+        -webkit-transform: rotate(45deg) translateY(14px);
+        -ms-transform: rotate(45deg) translateY(14px);
+        transform: rotate(45deg) translateY(14px);
+    }
+    .ham-menu.animateLine #line2 {
+        -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        transform: translateX(-20px);
+        background: transparent;
+    }
+    .ham-menu.animateLine #line3 {
+        position: relative;
+        -webkit-transform: rotate(-45deg) translateY(-15px);
+        -ms-transform: rotate(-45deg) translateY(-15px);
+        transform: rotate(-45deg) translateY(-15px);
+    }
+    .container .contactForm {
+        padding: 25px;
+    }
+    .container .contactInfo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container .contactInfo ul.sci {
+        margin-top: 40px;
+    }
+    .container .contactForm .formBox .inputBox.w50 {
+        width: 100%;
+    }
+    .icons {
+        margin: 2px;
+    }
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="icon" href="../../logoS.png" />
+    <link rel="stylesheet" href="main files/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-------------------------------------- Loading Screen ------------------------------------->
+
+    <div class="loader-container">
+        <div class="loader-inner-container">
+            <div class="loader-outer"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <div id='MainSection'>
+        <!-- Navbar Container-->
+        <nav id="nav-bar">
+
+            <!-- Logo -->
+            <img src="../../logo.png" alt="logo" class="logo" onclick="window.location.href = '../../index.html'">
+
+            <!-- Phone Navigation bar/Main menu -->
+            <section class="ham-menu">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </section>
+
+            <!-- Navigation bar/Main menu -->
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../Contact Us/contact.html">Contact</a></li>
+                <li id="goToLogin"><a href="../Sign Up/signup.html">Login</a></li>
+            </ul>
+
+            <!-- Login -->
+            <button type="button" class="login-button">Login</button>
+
+        </nav>
+
+        <!-- Main Container -->
+
+        <div class="containerP y-scroll y-mandatory">
+
+            <!-- Cell 1 -->
+            <div class="imgs img1">
+                <div>
+                    <div>Model S</div>
+                    <div>Order Online Now!!!</div>
+                    <div>
+                        <button class='btn'><a href='#'>CUSTOM ORDER</a></button>
+                        <button class='btn'>EXISTING INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell 2 -->
+            <div class="imgs img2">
+                <div>
+                    <div>Model Y</div>
+                    <div>Order Online Now!!!</div>
+                    <div>
+                        <button class='btn'>CUSTOM ORDER</button>
+                        <button class='btn'>EXISTING INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell 3 -->
+            <div class="imgs img3">
+                <div>
+                    <div>Model 3</div>
+                    <div>Order Online Now!!!</div>
+                    <div>
+                        <button class='btn'>CUSTOM ORDER</button>
+                        <button class='btn'>EXISTING INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell 4 -->
+            <div class="imgs img4">
+                <div>
+                    <div>Model X</div>
+                    <div>Order Online Now!!!</div>
+                    <div>
+                        <button class='btn'>CUSTOM ORDER</button>
+                        <button class='btn'>EXISTING INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell 5 -->
+            <div class="imgs img5">
+                <div>
+                    <div>Model A</div>
+                    <div>Order Online Now!!!</div>
+                    <div>
+                        <button class='btn'>CUSTOM ORDER</button>
+                        <button class='btn'>EXISTING INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell 6 -->
+            <div class="imgs img6">
+                <div>
+                    <div>Model T</div>
+                    <div>Order Online Now!!!</div>
+                    <div>
+                        <button class='btn'>CUSTOM ORDER</button>
+                        <button class='btn'>EXISTING INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+
+    <script>
+
+        // Loading Screen
+
+        $("#MainSection").css("display", "none");
+
+        $(window).on("load", function () {
+            $(".loader-container").delay(1000).fadeOut();
+            $("#MainSection").delay(1000).fadeIn();
+        });
+
+        const ham = document.querySelector('.ham-menu');
+        const navlist = document.querySelector('.nav-list');
+
+        // Changing Logo Image on resize
+
+        if ($(window).width() <= 600) {
+            $(".logo").attr("src", "../../logoS.png");
+            $(".logo").css({
+                "height": "60px",
+                "width": "76px"
+            });
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        }
+
+        $(window).resize(() => {
+            if ($(window).width() <= 600) {
+                $(".logo").attr("src", "../../logoS.png");
+                $(".logo").css({
+                    "height": "60px",
+                    "width": "76px"
+                });
+            }
+            if ($(window).width() > 600) {
+                $(".logo").attr("src", "../../logo.png");
+                $(".logo").css({
+                    "height": "170%",
+                    "width": "120px"
+                });
+            }
+        });
+
+        // Changing Window on clicking Login Button
+
+        $(".login-button").click(() => {
+            window.location.href = "../Sign Up/signup.html";
+        });
+
+        // Phone Menu
+
+        $(".nav-list").click(() => {
+            navlist.classList.toggle('open');
+            ham.classList.toggle('animateLine');
+        });
+
+        ham.addEventListener('click', () => {
+            navlist.classList.toggle('open');
+            ham.classList.toggle('animateLine');
+        });
+
+        // Linking All buttons to individual items 
+
+        var btns = document.getElementsByClassName("btn");
+
+        btns[1].onclick = inventory;
+        btns[3].onclick = inventory;
+        btns[5].onclick = inventory;
+        btns[7].onclick = inventory;
+        btns[9].onclick = inventory;
+        btns[11].onclick = inventory;
+
+        function inventory() {
+            window.location.href = "inventory/inventory.html";
+        }
+
+        $(btns[0]).click(() => {
+            window.location.href = "modelS/index.html";
+        });
+        $(btns[2]).click(() => {
+            window.location.href = "modelY/index.html";
+        });
+        $(btns[4]).click(() => {
+            window.location.href = "model3/index.html";
+        });
+        $(btns[6]).click(() => {
+            window.location.href = "modelX/index.html";
+        });
+        $(btns[8]).click(() => {
+            window.location.href = "modelA/index.html";
+        });
+        $(btns[10]).click(() => {
+            window.location.href = "modelT/index.html";
+        });
+    </script>
+</body>
+
+</html>

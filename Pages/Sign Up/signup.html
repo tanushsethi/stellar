@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up / Log In </title>
+  <link rel="icon" href="../../logoS.png" />
+  <link rel="stylesheet" href="signup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-------------------------------------- Loading Screen ------------------------------------->
+
+  <div class="loader-container">
+    <div class="loader-inner-container">
+      <div class="loader-outer"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-inner"></div>
+    </div>
+  </div>
+
+  <div>
+    <div id='particles-js'></div>
+
+    <!-- Navbar Container-->
+    <nav id="nav-bar">
+
+      <!-- Logo -->
+      <img src="../../logo.png" alt="logo" class="logo"  onclick="window.location.href = '../../index.html'">
+
+      <!-- Phone Navigation bar/Main menu -->
+      <section class="ham-menu">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+      </section>
+
+      <!-- Navigation bar/Main menu -->
+      <ul class="nav-list">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../Final Products/index.html">Shop</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../Contact Us/contact.html">Contact</a></li>
+        <li id="goToLogin"><a href="#">Login</a></li>
+      </ul>
+
+      <!-- Login -->
+      <button type="button" class="login-button">Login</button>
+
+    </nav>
+
+
+    <!----------account page---------->
+
+
+
+    <div class="login-container">
+
+      <div class="login-image">
+        <span class="image-heading"> Setting the world in motion... </span>
+      </div>
+
+      <div class="login-form-container">
+
+        <div class="login-form-btn1">
+          <span onclick="login()" class="switch-btn">Login</span>
+          <span onclick="register()" class="switch-btn">Register</span>
+          <hr id="login-Indicator">
+        </div>
+
+        <form id="LoginForm">
+
+          <button type="button" class="login-form-social-signin1">Login using Google</button>
+          <button type="button" class="login-form-social-signin2">Login using Facebook</button>
+
+          <div class="input-box">
+            <input type="text" placeholder="Username">
+            <img src="../../Media/Icons/instagram.png" class="form-icon">
+          </div>
+
+          <div class="input-box">
+            <input type="password" placeholder="Password">
+            <img src="../../Media/Icons/padlock-3-512.png" class="form-icon">
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="terms" name="terms" value="true">
+            <span> I agree to all terms of use.</span>
+          </label>
+
+          <button type="submit" class="login-form-btn2">Login </button>
+          <a href="#">Forget Password </a>
+
+        </form>
+
+        <form id="RegForm">
+          <button type="button" class="login-form-social-signin1">Register using Google</button>
+          <button type="button" class="login-form-social-signin2">Register using Facebook</button>
+
+          <div class="input-box">
+            <input type="text" placeholder="Username">
+            <img src="../../Media/Icons/instagram.png" class="form-icon">
+          </div>
+
+          <div class="input-box">
+            <input type="email" placeholder="Email">
+            <img src="../../Media/Icons/mail-512.png" class="form-icon">
+          </div>
+
+          <div class="input-box">
+            <input type="password" placeholder="Password">
+            <img src="../../Media/Icons/padlock-3-512.png" class="form-icon">
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="terms" name="terms" value="true">
+            <span> I agree to all terms of use.</span>
+          </label>
+
+          <button type="submit" class="login-form-btn2">Register </button>
+
+
+
+        </form>
+
+        <section id="social">
+
+          <!-- social icons -->
+          <a href="#"><img src="../../Media/Icons/instagram.png" class="icons"></a>
+          <a href="#"><img src="../../Media/Icons/linkedin.png" class="icons"></a>
+          <a href="#"><img src="../../Media/Icons/twitter.png" class="icons"></a>
+          <a href="#"><img src="../../Media/Icons/pinterest.png" class="icons"></a>
+          <a href="#"><img src="../../Media/Icons/youtube.png" class="icons"></a>
+
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+
+    // Loading Screen
+
+    $("body").css("overflow", "hidden");
+
+    $(window).on("load", function () {
+        $(".loader-container").delay(1000).fadeOut();
+        $('body')
+            .delay(1100)
+            .queue(function (next) {
+                $(this).css('overflow-y', 'scroll');
+                next();
+            });
+    });
+
+    // js for toggle form
+
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("login-Indicator");
+
+    function register() {
+      RegForm.style.transform = "translateX(0px)";
+      LoginForm.style.transform = "translateX(0px)";
+      Indicator.style.transform = "translateX(155px)";
+    }
+
+    function login() {
+      RegForm.style.transform = "translateX(300px)";
+      LoginForm.style.transform = "translateX(300px)";
+      Indicator.style.transform = "translateX(50px)";
+    }
+
+    // Phone Menu
+    const ham = document.querySelector('.ham-menu');
+    const navlist = document.querySelector('.nav-list');
+
+    ham.addEventListener('click', () => {
+      navlist.classList.toggle('open');
+      ham.classList.toggle('animateLine');
+    });
+
+    // Changing Logo on Resize
+
+    if ($(window).width() <= 600) {
+      $(".logo").attr("src", "../../logoS.png");
+      $(".logo").css({
+        "height": "60px",
+        "width": "76px"
+      });
+      if ($(window).width() > 600) {
+        $(".logo").attr("src", "../../logo.png");
+        $(".logo").css({
+          "height": "170%",
+          "width": "120px"
+        });
+      }
+    }
+
+    $(window).resize(() => {
+      if ($(window).width() <= 600) {
+        $(".logo").attr("src", "../../logoS.png");
+        $(".logo").css({
+          "height": "60px",
+          "width": "76px"
+        });
+      }
+      if ($(window).width() > 600) {
+        $(".logo").attr("src", "../../logo.png");
+        $(".logo").css({
+          "height": "170%",
+          "width": "120px"
+        });
+      }
+    });
+  </script>
+
+  <script src='particles.js'></script>
+  <script src='app.js'></script>
+
+</body>
+
+</html>

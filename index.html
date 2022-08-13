@@ -1,0 +1,657 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stellar</title>
+    <link rel="icon" href="logoS.png" />
+
+    <!-- Swiper.Js for Swipe Menu -->
+    <link rel="stylesheet" href="Pages/Home/swiper-bundle.min.css" />
+
+    <!-- For Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="Pages/Home/style.css">
+
+    <!-- Jquery -->
+    <script src="Pages/Home/jquery-3.6.0.min.js"></script>
+
+    <!-- Flickity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- Api For Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+    <!-------------------------------------- Loading Screen ------------------------------------->
+
+    <div class="loader-container">
+        <div class="loader-inner-container">
+            <div class="loader-outer"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+
+
+    <!---------------------------------------- Main/Home ---------------------------------------->
+
+    <!-- Header Container -->
+    <header id="header">
+
+        <!-- Navbar Container-->
+        <nav id="nav-bar">
+
+            <!-- Logo -->
+            <img width="130px" height="105px" src="logo.png" alt="logo" class="logo">
+
+            <!-- Phone Navigation bar/Main menu -->
+            <section class="ham-menu">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </section>
+
+            <!-- Navigation bar/Main menu -->
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="Pages/Final Products/index.html">Shop</a></li>
+                <li><a href="Pages/about/about.html">About</a></li>
+                <li><a href="Pages/Contact Us/contact.html">Contact</a></li>
+                <li id="goToLogin"><a href="Pages/Sign Up/signup.html">Login</a></li>
+            </ul>
+
+            <!-- Login -->
+            <button type="button" class="login-button">Login</button>
+
+        </nav>
+
+        <!-- Main Heading Container-->
+        <section class="mainheading">
+
+            <!-- Heading -->
+            <span class="mainheading-head">Stellar</span>
+
+            <!-- Other details -->
+            <p>Secure Your Car Hire Today. The Best Price Guaranteed</p>
+
+            <!-- More details button -->
+            <div class="btn-container">
+                <a href="Pages/Final Products/index.html" class="btn-anchor"><span class="btn-span">Learn
+                        More!</span></a>
+            </div>
+
+
+        </section>
+
+
+        <!-- Specification list container (Absolute)-->
+        <section class="speclist-container">
+
+            <!--  Specification Flex (relative)-->
+            <section class="speclist">
+
+                <!-- Flex Item 1 -->
+                <div>
+
+                    <!-- Heading (absolute)-->
+                    <h3>SPECS</h3>
+
+                    <!-- List 1 -->
+                    <ul id="speclist1">
+                        <li>Fuel Type</li>
+                        <li>Max Speed</li>
+                        <li>Battery</li>
+                    </ul>
+
+                </div>
+
+                <!-- Flex Item 2 / List 2-->
+                <ul id="speclist2">
+                    <li>Electric</li>
+                    <li>171km/h</li>
+                    <li>30.2KWH</li>
+                </ul>
+
+            </section>
+        </section>
+
+        <!-- Social menu -->
+        <section id="social">
+
+            <!-- social icons -->
+            <a href="#"><img src="./Media/Icons/instagram.png" class="icons"></a>
+            <a href="#"><img src="./Media/Icons/linkedin.png" class="icons"></a>
+            <a href="#"><img src="./Media/Icons/twitter.png" class="icons"></a>
+            <a href="#"><img src="./Media/Icons/pinterest.png" class="icons"></a>
+            <a href="#"><img src="./Media/Icons/youtube.png" class="icons"></a>
+
+        </section>
+
+        <!-- Bottom mark-->
+        <span class="watermark">© Stellar 2021</span>
+
+
+    </header>
+
+
+    <!----------------------------------------  About Section ---------------------------------------->
+
+    <!-- About Section Container (flex)-->
+    <section class="about-section-container">
+
+        <div class="about-section">
+
+            <!-- Gradient Shadow -->
+            <div id="shadow1"></div>
+
+            <!-- About Image Container-->
+            <div class="about-card">
+
+                <span class="about-card-heading">S T E L L A R</span>
+
+                <!-- About Image -->
+                <img src="./Media/Images/about-image.webp" class="about-card-img">
+
+
+                <!-- On hover text -->
+                <span class="about-card-text">In addition to giving riders a way to get from point A to point B, we're
+                    working to bring the future closer with self-driving technology</span>
+
+                <!-- On hover button -->
+                <!-- <button type="button" class="about-card-button">Click Me!</button>
+                     -->
+            </div>
+
+            <!-- About text container -->
+            <div class="about-details">
+
+                <!-- About heading -->
+                <span class="about-heading"> About Stellar</span>
+
+                <!-- Line -->
+                <div class="vline"></div>
+
+                <!-- About Details -->
+                <p>Stellar is India's first and only self-drive car rental service provider. Our fleet consists of more
+                    than 2500 premium cars across India and an established network extending across 50+ rental stations
+                    in 20 cities in the country. </p>
+
+                <p>We strive to keep going and set new benchmarks in the industry. </p>
+
+                <div class="btn-container about-card-button2">
+                    <a href="Pages/about/about.html" class="btn-anchor"><span class="btn-span">Learn More!</span></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swipe-section">
+
+            <h2 class="swipe-heading1">Recently Added</h2>
+
+            <!-- Swiper -->
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/6.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/7.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/8.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Media/Images/4.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- More details button -->
+            <div class="btn-container btn-swiper">
+                <a href="Pages/Final Products/index.html" class="btn-anchor"><span class="btn-span">Learn
+                        More!</span></a>
+            </div>
+
+            <h2 class="swipe-heading2">Our Top Models</h2>
+
+        </div>
+    </section>
+
+    <!----------------------------------------  Shop Flex ---------------------------------------->
+
+    <!-- Flex Container -->
+    <div id="shop-container">
+
+        <!-- Flex Cards -->
+
+        <!-- Card 1 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelS/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/1.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model S</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+        <!-- Card 2 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelX/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/2.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model X</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+        <!-- Card 3 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/model3/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/3.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model 3</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelA/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/4.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model A</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+
+        <!-- Card 5 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelZ/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/5.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model Z</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+
+        <!-- Card 6 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelT/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/6.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model T</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+
+        <!-- Card 7 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelY/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/7.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model Y</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+
+
+        <!-- Card 8 -->
+        <div class="shop-cards" onclick="window.location.href='Pages/Final Products/modelA/index.html'">
+
+            <!-- Card Image -->
+            <img src="./Media/Images/8.jpg" class="shop-cards-img">
+
+            <!-- On hover Card Text-->
+            <span class="shop-card-text">Model A</span>
+
+            <!-- On Hover card button -->
+            <!-- <button type="button" class="shop-card-button">Click Me!</button> -->
+        </div>
+
+    </div>
+
+
+    <!-- World-Wide Branches -->
+
+    <!-- About Section Container (flex)-->
+    <section class="about-section-container">
+
+        <div class="swipe-section">
+
+            <h2 class="swipe-heading1 margintop">World-Wide Branches</h2>
+            <br>
+            <div id='map'></div>
+
+            <!-- More details button -->
+            <div class="btn-container btn-swiper">
+                <a href="Pages/Final Products/index.html" class="btn-anchor"><span class="btn-span">Learn
+                        More!</span></a>
+            </div> 
+
+        </div>
+    </section>
+
+
+
+    <!----------------------------------------  Info Section ---------------------------------------->
+
+    <!-- Info Main Container -->
+    <section class="info-main">
+
+        <!-- Heading Section -->
+        <div>
+
+            <!-- Heading 1 -->
+            <h3 id="info-heading1">02. ----> WHAT WE DO</h3>
+
+            <!-- Heading 2 -->
+            <h1 id="info-heading2">Our services are tailored to make your journey outstanding.</h1>
+
+            <!-- Discription -->
+            <p id="info-heading-text">Secure Your Car Hire Today. The Best Price Guaranteed. Book at Over 53,000
+                Locations. Search, Compare and Save Using the World's Biggest Online Car Rental Service. No Credit Card
+                Fees. We Speak Your Language. Unbeatable Prices.</p>
+
+        </div>
+
+
+        <!-- Card Container/Flex -->
+        <div class="info-card-container">
+
+            <!-- Card 1 -->
+            <div class="info-card">
+                <h2 class="info-card-heading">01.</h2>
+                <h3 class="info-card-heading2">Extensive Network</h3>
+                <p class="desc">Currently, you can rent a self-driving car from Stellar in Ahmedabad, Bengaluru,
+                    Chandigarh, Chennai, Coimbatore, Delhi NCR, Hyderabad, Jaipur, Kochi, Kolkata, Mangalore, Mumbai,
+                    Mysuru, Pune, Surat, Trivandrum, Tirupati, Vijayawada, Vizag, Bhubaneswar, Nagpur & Vadodara.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="info-card">
+                <h2 class="info-card-heading">02.</h2>
+                <h3 class="info-card-heading2">Pick Your Favourite Car
+                </h3>
+                <p class="desc">Stellar has an amazing fleet of rental cars ranging from compact hatchbacks to roomy
+                    sedans and powerful SUVs. You can choose to hire a Hyundai Grand i10, Hyundai Creta, Maruti Suzuki
+                    Brezza, Toyota Innova Crysta, Mahindra XUV and many other car models that suite your requirement.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="info-card">
+                <h2 class="info-card-heading">03.</h2>
+                <h3 class="info-card-heading2">Flexible Rentals</h3>
+                <p class="desc">You decide whether you’d like to rent a car for an hour, a week, a month, or on a daily
+                    basis.The cars you rent from Revv can be used for trips out of the city or for daily travels through
+                    town. Revv also provides cars for pick up and drop off services at airports and bus and train
+                    stations.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="info-card">
+                <h2 class="info-card-heading">04.</h2>
+                <h3 class="info-card-heading2">Rental options</h3>
+                <p class="desc">With Revv, you can rent a car at a time that is convenient to you and get it delivered
+                    right to your doorstep. Apart from an hourly rate starting at just Rs. 33/hour, Revv also offers
+                    flexible car rental services. </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="info-card">
+                <h2 class="info-card-heading">05.</h2>
+                <h3 class="info-card-heading2">Safe, Sanitized Car </h3>
+                <p class="desc">The car sanitization process encompasses all the preventive hygiene best practices
+                    directed by the World Health Organization (WHO) and is diligently conducted for each vehicle
+                    delivered to the car subscribers.</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="info-card" style="padding-bottom: 80px;">
+                <h2 class="info-card-heading">06.</h2>
+                <h3 class="info-card-heading2">Best Rate Guarantee</h3>
+                <p class="desc">Book with us for the first time – online to avail 10% OFF on our listed price for self
+                    drive cars all over India. We guarantee lowest rates for rent a car, hire a car on rent for self
+                    driving all over India.</p>
+            </div>
+
+    </section>
+
+    <!-- s -->
+
+    <!-- Client's Comments Carousel -->
+
+    <h2 id='heading' class="h1">What Clients Are Saying...</h2>
+    <div class="contain">
+        <div class="gallery js-flickity">
+            <!-- Slide/Cell 1st -->
+            <div class='gallery-cell item mainMsg'>
+                <div style='vertical-align: baseline;'>
+                    <img class='quote' src='https://preview.colorlib.com/theme/stellar/images/icons/icon-quote.svg'>
+                </div>
+                <div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.</p>
+                    <br>
+                    <div class='person'>
+                        <div><img src='./Media/Images/temp/tim.jpg'></div>
+                        <div><span class='span1'>Tim Cook</span><br>
+                            <span class='span2'>CEO, Apple</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide/Cell 2nd -->
+            <div class='gallery-cell item mainMsg'>
+                <div style='vertical-align: baseline;'>
+                    <img class='quote' src='https://preview.colorlib.com/theme/stellar/images/icons/icon-quote.svg'>
+                </div>
+                <div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.</p>
+                    <br>
+                    <div class='person'>
+                        <div><img src='./Media/Images/temp/tim.jpg'></div>
+                        <div><span class='span1'>Tim Cook</span><br>
+                            <span class='span2'>CEO, Apple</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide/Cell 3rd -->
+            <div class='gallery-cell item mainMsg'>
+                <div style='vertical-align: baseline;'>
+                    <img class='quote' src='https://preview.colorlib.com/theme/stellar/images/icons/icon-quote.svg'>
+                </div>
+                <div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.</p>
+                    <br>
+                    <div class='person'>
+                        <div><img src='./Media/Images/temp/tim.jpg'></div>
+                        <div><span class='span1'>Tim Cook</span><br>
+                            <span class='span2'>CEO, Apple</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide/Cell 4th -->
+            <div class='gallery-cell item mainMsg'>
+                <div style='vertical-align: baseline;'>
+                    <img class='quote' src='https://preview.colorlib.com/theme/stellar/images/icons/icon-quote.svg'>
+                </div>
+                <div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.</p>
+                    <br>
+                    <div class='person'>
+                        <div><img src='./Media/Images/temp/tim.jpg'></div>
+                        <div><span class='span1'>Tim Cook</span><br>
+                            <span class='span2'>CEO, Apple</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Some Selected Client Companies -->
+
+    <div id='clts'>
+        <h4 id='head4'>&nbspSELECTED CLIENTS</h4>
+        <p id='head1a'>Here are some of the brands we have had<br>the priviledge to work with.
+        </p>
+        <div id="clientsLog">
+            <div><img src="./Media/Images/temp/one.jpg"></div>
+            <div><img src='./Media/Images/temp/two.jpg'></div>
+            <div><img src='./Media/Images/temp/three.jpg'></div>
+            <div><img src='./Media/Images/temp/four.jpg'></div>
+            <div><img src='./Media/Images/temp/five.jpg'></div>
+            <div><img src='./Media/Images/temp/six.jpg'></div>
+            <div><img src='./Media/Images/temp/seven.jpg'></div>
+            <div><img src='./Media/Images/temp/eight.jpg'></div>
+        </div>
+
+        <!-- Counter -->
+
+        <div id='counters'>
+            <div>
+                <p class='counterIt' data-count="213">0</p>
+                <p class='counterHead'>STATE BRANCHES</p>
+            </div>
+            <div>
+                <p class='counterIt' data-count="179">0</p>
+                <p class='counterHead'>AWARDS RECIEVED</p>
+            </div>
+            <div>
+                <p class='counterIt' data-count="35">0</p>
+                <p class='counterHead'>INTERNATIONAL BRANCHES</p>
+            </div>
+            <div>
+                <p class='counterIt' data-count="2319">0</p>
+                <p class='counterHead'>HAPPY CLIENTS</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <h4 id='head4'>&nbspGET IN TOUCH</h4>
+        <p id='head1b'>Setting the world in motion...
+            <br><a href="mailto:hello@stellar.com">hello@stellar.com</a>
+        </p><br><br>
+        <div id='footDetail'>
+            <div>
+                <p class='lightIt'>WHERE TO FIND US</p>
+                <p class='whiteIt'>1600 Amphitheatre Parkway</p>
+                <p class='whiteIt'>Mountain View, California</p>
+                <p class='whiteIt'>94043 US</p>
+            </div>
+            <div>
+                <p class='lightIt'>FOLLOW US</p>
+                <p><a href='#' class='whiteIt'>Facebook</a></p>
+                <p><a href='#' class='whiteIt'>Twitter</a></p>
+                <p><a href='#' class='whiteIt'>Instagram</a></p>
+            </div>
+            <div>
+                <p class='lightIt'>CONTACT US</p>
+                <p><a href="mailto:info@stellar.com" class='whiteIt'>info@stellar.com</a></p>
+                <p><a href='#' class='whiteIt'>+197 543 2345</a></p>
+                <p><a href='#' class='whiteIt'>+197 123 9876</a></p>
+            </div>
+        </div><br><br>
+        <div id='footB'>
+            <div>
+                <p id='l1'></p>
+                <div class="wrapper">
+                    <a href="Pages/Contact Us/contact.html"><span>LET'S TALK&nbsp&nbsp<i
+                                class="fas fa-arrow-right"></i></a></span>
+                </div>
+            </div>
+            <div>
+                <p class='lightIt' id='toSubscribe'>SUBSCRIBE</p>
+                <input placeholder="Email Address" type='email'><button id='subscribe'>SUBSCRIBE</button>
+            </div>
+        </div>
+        <br><br><br>
+        <!-- <div id='top_pr'>
+            <div>Copyright ©2021 All rights reserved
+            </div>
+            <div><a id='Totop' href='#'><i class="fas fa-long-arrow-alt-up"></i></a></div>
+        </div> -->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="Pages/Home/swiper-bundle.min.js"></script>
+    <script src="Pages/Home/app.js"></script>
+
+</body>
+
+</html>
